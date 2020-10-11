@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>352969268875-ifhmkmqnp6p4j1pnil5575rtl7d0nren.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.352969268875-ifhmkmqnp6p4j1pnil5575rtl7d0nren</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBTJ3qOzJkyuoWdmqiPS9I4kuSPk-nfqXU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>352969268875</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bobla.ecommerce</string>
+	<key>PROJECT_ID</key>
+	<string>bobla-6d712</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bobla-6d712.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:352969268875:ios:2cf8c315e06594caedbe8e</string>
+	<key>DATABASE_URL</key>
+	<string>https://bobla-6d712.firebaseio.com</string>
+</dict>
+</plist>
