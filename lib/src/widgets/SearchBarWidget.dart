@@ -37,17 +37,17 @@ class SearchBarWidget extends StatelessWidget {
                 style: Theme.of(context).textTheme.caption.merge(TextStyle(fontSize: 14)),
               ),
             ),
-            doNotShowFilter ?
-                Container()
-                 : InkWell(
-              onTap: () {
-                onClickFilter('e');
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(right: 5, left: 5, top: 3, bottom: 3),
-                child: Icon(UiIcons.settings_2, color: Theme.of(context).accentColor),
-              ),
-            )
+            // doNotShowFilter ?
+            //     Container()
+            //      : InkWell(
+            //   onTap: () {
+            //     onClickFilter('e');
+            //   },
+            //   child: Padding(
+            //     padding: const EdgeInsets.only(right: 5, left: 5, top: 3, bottom: 3),
+            //     child: Icon(UiIcons.settings_2, color: Theme.of(context).accentColor),
+            //   ),
+            // )
 
 
           ],

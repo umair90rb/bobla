@@ -103,7 +103,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                         primary: false,
                         children: <Widget>[
                           ListTile(
-                            leading: Icon(UiIcons.user_1),
+                            leading: Icon(UiIcons.user_2, color: Theme.of(context).focusColor,),
                             title: Text(
                               S.of(context).profile_settings,
                               style: Theme.of(context).textTheme.body2,
@@ -183,6 +183,57 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                         ],
                       ),
                     ),
+                    // Container(
+                    //   margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    //   decoration: BoxDecoration(
+                    //     color: Theme.of(context).primaryColor,
+                    //     borderRadius: BorderRadius.circular(6),
+                    //     boxShadow: [
+                    //       BoxShadow(
+                    //           color: Theme.of(context).hintColor.withOpacity(0.15),
+                    //           offset: Offset(0, 3),
+                    //           blurRadius: 10)
+                    //     ],
+                    //   ),
+                    //   child: ListView(
+                    //     shrinkWrap: true,
+                    //     primary: false,
+                    //     children: <Widget>[
+                    //       ListTile(
+                    //         leading: Icon(Icons.credit_card),
+                    //         title: Text(
+                    //           S.of(context).payments_settings,
+                    //           style: Theme.of(context).textTheme.body2,
+                    //         ),
+                    //         trailing: ButtonTheme(
+                    //           padding: EdgeInsets.all(0),
+                    //           minWidth: 50.0,
+                    //           height: 25.0,
+                    //           child: PaymentSettingsDialog(
+                    //             creditCard: _con.creditCard,
+                    //             onChanged: () {
+                    //               _con.updateCreditCard(_con.creditCard);
+                    //               //setState(() {});
+                    //             },
+                    //           ),
+                    //         ),
+                    //       ),
+                    //       ListTile(
+                    //         dense: true,
+                    //         title: Text(
+                    //           S.of(context).default_credit_card,
+                    //           style: Theme.of(context).textTheme.body1,
+                    //         ),
+                    //         trailing: Text(
+                    //           _con.creditCard.number.isNotEmpty
+                    //               ? _con.creditCard.number.replaceRange(0, _con.creditCard.number.length - 4, '...')
+                    //               : '',
+                    //           style: TextStyle(color: Theme.of(context).focusColor),
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                       decoration: BoxDecoration(
@@ -200,58 +251,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                         primary: false,
                         children: <Widget>[
                           ListTile(
-                            leading: Icon(Icons.credit_card),
-                            title: Text(
-                              S.of(context).payments_settings,
-                              style: Theme.of(context).textTheme.body2,
-                            ),
-                            trailing: ButtonTheme(
-                              padding: EdgeInsets.all(0),
-                              minWidth: 50.0,
-                              height: 25.0,
-                              child: PaymentSettingsDialog(
-                                creditCard: _con.creditCard,
-                                onChanged: () {
-                                  _con.updateCreditCard(_con.creditCard);
-                                  //setState(() {});
-                                },
-                              ),
-                            ),
-                          ),
-                          ListTile(
-                            dense: true,
-                            title: Text(
-                              S.of(context).default_credit_card,
-                              style: Theme.of(context).textTheme.body1,
-                            ),
-                            trailing: Text(
-                              _con.creditCard.number.isNotEmpty
-                                  ? _con.creditCard.number.replaceRange(0, _con.creditCard.number.length - 4, '...')
-                                  : '',
-                              style: TextStyle(color: Theme.of(context).focusColor),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor,
-                        borderRadius: BorderRadius.circular(6),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Theme.of(context).hintColor.withOpacity(0.15),
-                              offset: Offset(0, 3),
-                              blurRadius: 10)
-                        ],
-                      ),
-                      child: ListView(
-                        shrinkWrap: true,
-                        primary: false,
-                        children: <Widget>[
-                          ListTile(
-                            leading: Icon(UiIcons.settings_1),
+                            leading: Icon(UiIcons.settings_1, color: Theme.of(context).focusColor,),
                             title: Text(
                               S.of(context).app_settings,
                               style: Theme.of(context).textTheme.body2,

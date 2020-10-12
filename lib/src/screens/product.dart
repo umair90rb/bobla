@@ -374,7 +374,7 @@ class _ProductWidgetState extends StateMVC<ProductWidget>
                       Navigator.push(context, MaterialPageRoute(builder: (_) {
                         return DetailScreen(
                             heroTag: widget._heroTag,
-                            image: _con.product.image.thumb);
+                            image: _con.product.image.url);
                       }));
                     },
                     child: Hero(
@@ -389,9 +389,11 @@ class _ProductWidgetState extends StateMVC<ProductWidget>
                             child: ClipRRect(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(5)),
-                              child: CachedNetworkImage(
+                              child:
+                              // Image.network(_con.product.image.url)
+                              CachedNetworkImage(
                                 fit: BoxFit.cover,
-                                imageUrl: _con.product.image.thumb,
+                                imageUrl: _con.product.image.url,
                                 placeholder: (context, url) => Image.asset(
                                   'assets/img/loading.gif',
                                   fit: BoxFit.cover,
@@ -792,15 +794,26 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenWidgetState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
+    print(widget.image);
     return Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          leading: new IconButton(
+            icon: new Icon(UiIcons.return_icon, color: Colors.white,),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          backgroundColor: Color(0x44000000),
+          elevation: 0,
+
+        ),
         body: Center(
-      child: GestureDetector(
-        child: Hero(
-            tag: widget.heroTag,
-            child: PhotoView(
-              imageProvider: CachedNetworkImageProvider(widget.image),
-            )),
-      ),
-    ));
+          child: GestureDetector(
+            child: Hero(
+                tag: widget.heroTag,
+                child: PhotoView(
+                  imageProvider: CachedNetworkImageProvider(widget.image),
+                )),
+          ),
+        ));
   }
 }
